@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Module
 {
@@ -7,7 +8,7 @@ namespace Module
         public Foo()
         {
             // This cause ALC to crash
-            var xmlSerializer = new XmlSerializer(typeof(Bar));
+            var xmlSerializer = new XmlSerializer(typeof(List<Bar>));
         }
     }
 }
